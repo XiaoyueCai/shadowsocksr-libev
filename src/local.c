@@ -1009,7 +1009,7 @@ remote_recv_cb(EV_P_ ev_io *w, int revents) {
     ev_timer_again(EV_A_ &remote->recv_ctx->watcher);
 
 #ifdef ANDROID
-    stat_update_cb();
+    // stat_update_cb();
 #endif
 
     ssize_t r = recv(remote->fd, server->buf->array, BUF_SIZE, 0);
